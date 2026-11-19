@@ -14,31 +14,21 @@ a{color:#0F2A4A;text-decoration:none}a:hover{color:#1FA4A9}
 </style>
 <style>html{scroll-behavior:smooth}*{box-sizing:border-box}</style>
 <style id="sml-theme">
-:root{color-scheme:light}
-html[data-theme=dark]{color-scheme:dark}
-html[data-theme=dark] body{background:#0E1621}
-html[data-theme=dark] a{color:#E6EEF7}
+:root{color-scheme:light;--bg:#FFFFFF;--bg-alt:#F4F7FA;--navy-bg:#0F2A4A;--footer-bg:#0F2A4A;--heading:#0F2A4A;--text:#333333;--text-2:#4A5A6B;--muted:#5F7186;--accent-text:#1A8A8E;--line:#E6EDF4;--line-2:#C9D6E3;--line-strong:#0F2A4A}
+html[data-theme=dark]{color-scheme:dark;--bg:#0E1621;--bg-alt:#141F2D;--navy-bg:#1D3A5C;--footer-bg:#08101A;--heading:#E6EEF7;--text:#D3DCE6;--text-2:#A9B6C4;--muted:#93A3B5;--accent-text:#3CC2C7;--line:#233246;--line-2:#3A4B60;--line-strong:#8FA6BF}
+body{background:var(--bg) !important}
+a{color:var(--heading)}
 html[data-theme=dark] a:hover{color:#3CC2C7}
-html[data-theme=dark] [style*="background: #FFFFFF"]{background-color:#0E1621 !important}
-html[data-theme=dark] [style*="background: #F4F7FA"],html[data-theme=dark] [style*="background-color: #F4F7FA"]{background-color:#141F2D !important}
-html[data-theme=dark] [style*="background: #0F2A4A"]{background-color:#1D3A5C !important}
-html[data-theme=dark] footer[style*="background: #0F2A4A"]{background-color:#08101A !important;border-top:1px solid #233246}
-html[data-theme=dark] [style*="color: #0F2A4A"]{color:#E6EEF7 !important}
-html[data-theme=dark] [style*="color: #333333"]{color:#D3DCE6 !important}
-html[data-theme=dark] [style*="color: #4A5A6B"]{color:#A9B6C4 !important}
-html[data-theme=dark] [style*="color: #5F7186"]{color:#93A3B5 !important}
-html[data-theme=dark] [style*="color: #1A8A8E"]{color:#3CC2C7 !important}
-html[data-theme=dark] [style*="#E6EDF4"]{border-color:#233246 !important}
-html[data-theme=dark] [style*="#C9D6E3"]{border-color:#3A4B60 !important}
-html[data-theme=dark] [style*="solid #0F2A4A"]{border-color:#8FA6BF !important}
-.sml-theme-btn{align-self:center;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid #E6EDF4;background:transparent;color:#0F2A4A;cursor:pointer}
+html[data-theme=dark] footer{border-top:1px solid #233246}
+html[data-theme=dark] .hero,html[data-theme=dark] .subhero{position:relative;isolation:isolate}
+html[data-theme=dark] .hero::before,html[data-theme=dark] .subhero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;-webkit-backdrop-filter:invert(1) hue-rotate(180deg) brightness(1.1);backdrop-filter:invert(1) hue-rotate(180deg) brightness(1.1)}
+html[data-theme=dark] .hero>*,html[data-theme=dark] .subhero>*{position:relative;z-index:1}
+.sml-theme-btn{align-self:center;display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--heading);cursor:pointer}
 .sml-theme-btn:hover{color:#1FA4A9;border-color:#1FA4A9}
 .sml-theme-btn svg{width:20px;height:20px}
 .sml-theme-btn .i-sun{display:none}
-html[data-theme=dark] .sml-theme-btn{border-color:#233246;color:#E6EEF7}
 html[data-theme=dark] .sml-theme-btn .i-sun{display:block}
 html[data-theme=dark] .sml-theme-btn .i-moon{display:none}
-html[data-theme=dark] .hero,html[data-theme=dark] .subhero{position:relative;isolation:isolate}html[data-theme=dark] .hero::before,html[data-theme=dark] .subhero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;-webkit-backdrop-filter:invert(1) hue-rotate(180deg) brightness(1.1);backdrop-filter:invert(1) hue-rotate(180deg) brightness(1.1)}html[data-theme=dark] .hero>*,html[data-theme=dark] .subhero>*{position:relative;z-index:1}
 </style>
 <script id="sml-theme-script">
 (function(){
@@ -56,15 +46,15 @@ html[data-theme=dark] .hero,html[data-theme=dark] .subhero{position:relative;iso
 </script>
 </head>
 <body>
-<div style="font-family: 'Noto Sans KR', sans-serif; color: #333333; width: 100%; min-height: 100vh; display: flex; flex-direction: column">
+<div style="font-family: 'Noto Sans KR', sans-serif; color: var(--text); width: 100%; min-height: 100vh; display: flex; flex-direction: column">
 
-<header style="background: #FFFFFF; border-bottom: 1px solid #E6EDF4">
+<header style="background: var(--bg); border-bottom: 1px solid var(--line)">
 <div style="max-width: 1200px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <a href="index.html" style="display: flex; align-items: center; gap: 12px">
 <img src="logo.png" alt="스마트 모빌리티 연구실 로고" style="width: 40px; height: 40px">
 <div style="display: flex; flex-direction: column">
-<span style="font-size: 18px; font-weight: 700; color: #0F2A4A">스마트 모빌리티 연구실</span>
-<span style="font-size: 12px; color: #5F7186; letter-spacing: 1px">SMART MOBILITY LAB · KEIMYUNG UNIVERSITY</span>
+<span style="font-size: 18px; font-weight: 700; color: var(--heading)">스마트 모빌리티 연구실</span>
+<span style="font-size: 12px; color: var(--muted); letter-spacing: 1px">SMART MOBILITY LAB · KEIMYUNG UNIVERSITY</span>
 </div>
 </a>
 <nav aria-label="주 메뉴" style="display: flex; flex-wrap: wrap; gap: 4px 26px; font-size: 15px; font-weight: 500">
@@ -81,42 +71,42 @@ html[data-theme=dark] .hero,html[data-theme=dark] .subhero{position:relative;iso
 </div>
 </header>
 
-<section class="subhero" style="background-color: #F4F7FA">
+<section class="subhero" style="background-color: var(--bg-alt)">
 <div style="max-width: 1200px; margin: 0 auto; padding: 64px 32px 72px">
-<p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 3px; color: #1A8A8E">NEWS</p>
-<h1 style="margin: 10px 0 0; font-size: 42px; color: #0F2A4A">소식</h1>
+<p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 3px; color: var(--accent-text)">NEWS</p>
+<h1 style="margin: 10px 0 0; font-size: 42px; color: var(--heading)">소식</h1>
 </div>
 </section>
-<section style="background: #FFFFFF">
+<section style="background: var(--bg)">
 <div style="max-width: 1200px; margin: 0 auto; padding: 72px 32px 96px">
 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px"><div style="display: flex; flex-direction: column; gap: 10px">
-<div style="border-radius: 14px; background: #F4F7FA; border: 1px dashed #C9D6E3; display: flex; align-items: center; justify-content: center; color: #5F7186; font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
-<span style="font-size: 14px; color: #5F7186">[YYYY.MM.DD]</span>
-<span style="font-size: 18px; font-weight: 700; color: #0F2A4A">[소식 제목]</span>
+<div style="border-radius: 14px; background: var(--bg-alt); border: 1px dashed var(--line-2); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
+<span style="font-size: 14px; color: var(--muted)">[YYYY.MM.DD]</span>
+<span style="font-size: 18px; font-weight: 700; color: var(--heading)">[소식 제목]</span>
 <p style="margin: 0; font-size: 15px; line-height: 1.7">[소식 내용 1~2문장]</p></div><div style="display: flex; flex-direction: column; gap: 10px">
-<div style="border-radius: 14px; background: #F4F7FA; border: 1px dashed #C9D6E3; display: flex; align-items: center; justify-content: center; color: #5F7186; font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
-<span style="font-size: 14px; color: #5F7186">[YYYY.MM.DD]</span>
-<span style="font-size: 18px; font-weight: 700; color: #0F2A4A">[소식 제목]</span>
+<div style="border-radius: 14px; background: var(--bg-alt); border: 1px dashed var(--line-2); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
+<span style="font-size: 14px; color: var(--muted)">[YYYY.MM.DD]</span>
+<span style="font-size: 18px; font-weight: 700; color: var(--heading)">[소식 제목]</span>
 <p style="margin: 0; font-size: 15px; line-height: 1.7">[소식 내용 1~2문장]</p></div><div style="display: flex; flex-direction: column; gap: 10px">
-<div style="border-radius: 14px; background: #F4F7FA; border: 1px dashed #C9D6E3; display: flex; align-items: center; justify-content: center; color: #5F7186; font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
-<span style="font-size: 14px; color: #5F7186">[YYYY.MM.DD]</span>
-<span style="font-size: 18px; font-weight: 700; color: #0F2A4A">[소식 제목]</span>
+<div style="border-radius: 14px; background: var(--bg-alt); border: 1px dashed var(--line-2); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
+<span style="font-size: 14px; color: var(--muted)">[YYYY.MM.DD]</span>
+<span style="font-size: 18px; font-weight: 700; color: var(--heading)">[소식 제목]</span>
 <p style="margin: 0; font-size: 15px; line-height: 1.7">[소식 내용 1~2문장]</p></div><div style="display: flex; flex-direction: column; gap: 10px">
-<div style="border-radius: 14px; background: #F4F7FA; border: 1px dashed #C9D6E3; display: flex; align-items: center; justify-content: center; color: #5F7186; font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
-<span style="font-size: 14px; color: #5F7186">[YYYY.MM.DD]</span>
-<span style="font-size: 18px; font-weight: 700; color: #0F2A4A">[소식 제목]</span>
+<div style="border-radius: 14px; background: var(--bg-alt); border: 1px dashed var(--line-2); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
+<span style="font-size: 14px; color: var(--muted)">[YYYY.MM.DD]</span>
+<span style="font-size: 18px; font-weight: 700; color: var(--heading)">[소식 제목]</span>
 <p style="margin: 0; font-size: 15px; line-height: 1.7">[소식 내용 1~2문장]</p></div><div style="display: flex; flex-direction: column; gap: 10px">
-<div style="border-radius: 14px; background: #F4F7FA; border: 1px dashed #C9D6E3; display: flex; align-items: center; justify-content: center; color: #5F7186; font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
-<span style="font-size: 14px; color: #5F7186">[YYYY.MM.DD]</span>
-<span style="font-size: 18px; font-weight: 700; color: #0F2A4A">[소식 제목]</span>
+<div style="border-radius: 14px; background: var(--bg-alt); border: 1px dashed var(--line-2); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
+<span style="font-size: 14px; color: var(--muted)">[YYYY.MM.DD]</span>
+<span style="font-size: 18px; font-weight: 700; color: var(--heading)">[소식 제목]</span>
 <p style="margin: 0; font-size: 15px; line-height: 1.7">[소식 내용 1~2문장]</p></div><div style="display: flex; flex-direction: column; gap: 10px">
-<div style="border-radius: 14px; background: #F4F7FA; border: 1px dashed #C9D6E3; display: flex; align-items: center; justify-content: center; color: #5F7186; font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
-<span style="font-size: 14px; color: #5F7186">[YYYY.MM.DD]</span>
-<span style="font-size: 18px; font-weight: 700; color: #0F2A4A">[소식 제목]</span>
+<div style="border-radius: 14px; background: var(--bg-alt); border: 1px dashed var(--line-2); display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 14px; aspect-ratio: 16 / 10; margin-bottom: 8px">[활동 사진]</div>
+<span style="font-size: 14px; color: var(--muted)">[YYYY.MM.DD]</span>
+<span style="font-size: 18px; font-weight: 700; color: var(--heading)">[소식 제목]</span>
 <p style="margin: 0; font-size: 15px; line-height: 1.7">[소식 내용 1~2문장]</p></div></div>
 </div>
 </section>
-<footer style="background: #0F2A4A; color: #FFFFFF; margin-top: auto">
+<footer style="background: var(--footer-bg); color: #FFFFFF; margin-top: auto">
 <div style="max-width: 1200px; margin: 0 auto; padding: 48px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 14px; color: #DCE6F0">
 <span style="font-weight: 700; color: #FFFFFF">스마트 모빌리티 연구실 · Smart Mobility Lab</span>
 <span>© 2026 Keimyung University</span>
@@ -125,10 +115,10 @@ html[data-theme=dark] .hero,html[data-theme=dark] .subhero{position:relative;iso
 
 </div>
 <div id="sml-edit" contenteditable="false" style="position: fixed; right: 20px; bottom: 20px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-family: 'Noto Sans KR', sans-serif">
-<div id="sml-toast" hidden style="max-width: 320px; padding: 12px 16px; border-radius: 10px; background: #0F2A4A; color: #FFFFFF; font-size: 14px; line-height: 1.6; box-shadow: 0 4px 14px rgba(15,42,74,.25)"></div>
+<div id="sml-toast" hidden style="max-width: 320px; padding: 12px 16px; border-radius: 10px; background: var(--navy-bg); color: #FFFFFF; font-size: 14px; line-height: 1.6; box-shadow: 0 4px 14px rgba(15,42,74,.25)"></div>
 <div style="display: flex; gap: 8px">
 <button type="button" id="sml-save" hidden style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 0; background: #1A8A8E; color: #FFFFFF; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 14px rgba(15,42,74,.25)">저장 (Ctrl+S)</button>
-<button type="button" id="sml-toggle" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 0; background: #0F2A4A; color: #FFFFFF; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 14px rgba(15,42,74,.25)">편집하기</button>
+<button type="button" id="sml-toggle" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 0; background: var(--navy-bg); color: #FFFFFF; font-size: 15px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 14px rgba(15,42,74,.25)">편집하기</button>
 </div>
 </div>
 <script id="sml-edit-script">
